@@ -16,6 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import ChatBot from './ChatBot';
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { SidebarTrigger } from "./ui/sidebar";
 
@@ -57,9 +58,9 @@ const Navbar = () => {
                 height={24}
                 className="w-6 h-6"
               />
-              <div className="text-xl font-bold">
+              <div className="text-xl font-bold text-white">
                 HI
-                <span className="text-secondary-500 font-light hover:!text-primary-300">
+                <span className="text-white font-light hover:!text-primary-300">
                   VE
                 </span>
               </div>
@@ -120,10 +121,7 @@ const Navbar = () => {
         <div className="flex items-center gap-5">
           {authUser ? (
             <>
-              <div className="relative hidden md:block">
-                <MessageCircle className="w-6 h-6 cursor-pointer text-primary-200 hover:text-primary-400" />
-                <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full ring-2 ring-[#2D2D2D]"></span>
-              </div>
+                <ChatBot />
               <div className="relative hidden md:block">
                 <Bell className="w-6 h-6 cursor-pointer text-primary-200 hover:text-primary-400" />
                 <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full ring-2 ring-[#2D2D2D]"></span>
